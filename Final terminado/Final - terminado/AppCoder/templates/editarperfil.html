@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+{% block contenidoModificable %}
+  <form action="{% url 'EditarPerfil' %}" method="post">
+    {% csrf_token %}
+
+    <div class="formulario">
+      {{ miFormulario.as_p }}
+      <button type="submit" class="boton">Confirmar cambios</button>
+      <a class="enlace" href="{% url 'AgregarAvatar' %}">Cambiar avatar</a>
+    </div>
+  </form>
+{% endblock contenidoModificable %}
+    

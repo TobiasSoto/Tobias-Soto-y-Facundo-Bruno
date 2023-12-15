@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoModificable %}
+<ul>
+
+    {% for libro in libros %}
+        <li>
+           <a href="{% url 'EspicificacionesLibros' libro.id %}"> {{libro.nombre}} </a>
+        </li>        
+        <div style="display: flex; column-gap: 8px;">
+            <button style ="background-color: red; color:white; font-size: 16px;">
+                <a href="{% url 'EliminarLibros' libro.id %}">Eliminar</a>
+            </button>
+            <button >
+                <a href="{% url 'EditarLibros' libro.id %}">Editar</a>
+            </button>
+
+        
+        </div>
+    {% endfor %}
+
+
+    
+    <a class="btn btn-primary" href="{% url 'FormularioLibros' %}"> Crear Libro </a>
+
+
+</ul>
+
+{% endblock contenidoModificable %}

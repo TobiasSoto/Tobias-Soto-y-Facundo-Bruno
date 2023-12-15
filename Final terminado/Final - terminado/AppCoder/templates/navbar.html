@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'inicio' %}">inicio</a>
+        <a class="navbar-brand" href="{% url 'ListaLibros' %}">Libros</a>
+        <a class="navbar-brand" href="{% url 'BusquedaLibros' %}">Buscar libros por su numero de guardado</a>
+
+        {% if user.is_authenticated %}
+            {% if url_avatar %}
+                <img src="{{url_avatar}}"  height="30px"   alt="">
+            {% endif %}
+            <p>Bienvenido {{user.username}}</p>
+            <a class="btn btn-primary" href="{% url 'logout' %}"> Cerrar Sesion </a>
+            <a class="btn btn-primary" href="{% url 'EditarPerfil' %}">  Editar Perfil </a>
+            {% else %}
+            <a class="btn btn-primary" href="{% url 'Login' %}"> Iniciar Sesion </a>
+            <a class="btn btn-primary" href="{% url 'Register' %}"> Registrarse </a>
+        {% endif %}
+        
+    </div>
+</nav>
+</nav>

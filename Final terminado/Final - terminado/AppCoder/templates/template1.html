@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer template</title>
+</head>
+<body>
+    <hl> Bienvenidos! </hl>
+
+    <p> Los saluda <strong> {{my_name}} </strong></p>
+
+    <h3>Mis notas: </h3>
+    <ul>
+
+    {% for nota in  notas%}
+        
+        {% if nota >= 6 %}
+            <li style="color: lime;"> {{nota}} - Aprobado </li>
+            {% else %}
+            <li style="color: red;"> {{nota}} - Desprobado </li>
+        
+            {% endif %}
+    
+
+
+    {% endfor %}
+    </ul>   
+
+</body>
+</html>

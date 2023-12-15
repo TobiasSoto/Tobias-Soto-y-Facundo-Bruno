@@ -1,0 +1,17 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoModificable %}
+
+<form action="{% url 'EliminarLibros' libro.id%}" method="post">{% csrf_token %}
+
+        <p>Esta seguro que desea eliminar el libro?</p>
+
+    <button type='submit'> Confirmar </button>
+
+
+</form>
+
+    
+{% endblock contenidoModificable %}
+

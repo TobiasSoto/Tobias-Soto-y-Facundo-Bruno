@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoModificable %}
+    
+    
+    <form action="{% url 'Register' %}" method="post">{% csrf_token %}
+    
+        {{ miFormulario.as_p }}
+    
+        <button type="submit"> Registrar </button>
+    </form>
+
+
+{% endblock contenidoModificable %}

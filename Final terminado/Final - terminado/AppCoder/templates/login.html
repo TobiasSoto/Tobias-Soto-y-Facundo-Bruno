@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoModificable %}
+    
+    
+    <form action="{% url 'Login' %}" method="post">{% csrf_token %}
+    
+        {{ miFormulario.as_p }}
+    
+        <button type="submit"> Ingresar </button>
+    </form>
+
+<h1>Si usted no tiene un usuario creado, porfavor registrese!</h1>
+{% endblock contenidoModificable %}

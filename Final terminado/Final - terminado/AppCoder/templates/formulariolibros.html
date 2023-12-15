@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoModificable %}
+    
+    
+<form action="{% url 'FormularioLibros' %}" method="post">
+    {% csrf_token %}
+    
+    {{ miFormulario2.as_p }}
+    
+    <button type="submit">Enviar</button>
+</form>
+
+
+
+
+{% endblock contenidoModificable %}

@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoModificable %}
+
+<form action="{% url 'AgregarAvatar' %}" enctype="multipart/form-data" method="post">{% csrf_token %}
+
+        {{miFormulario.as_p}}
+
+    <button type='submit'> Confirmar cambios </button>
+
+
+</form>
+
+    
+{% endblock contenidoModificable %}
+
+
