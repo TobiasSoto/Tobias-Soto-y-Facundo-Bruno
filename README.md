@@ -5,3 +5,8 @@ El login y el register lo hicimos en cojunto siguiendo las intruciones y tutoria
 
 Excel con información de casos de pruebas documentadas: https://docs.google.com/spreadsheets/d/19_umr_5hdPiTFgs-UtoQ7iQwwbeoxKH7pDmtA39UGFI/edit?usp=sharing
 
+
+El views.py fue hecho por los dos en conjunto. 
+La parte de la creacion/eliminacion de los libros, el listado de libros y la edicion del perfil fueron hechas por Facundo.
+La parte del registro/login, los formularios y, la busqueda y resultado de los libros fueron hechas por Tobias.
+En el caso del html fue distribuido equitativamente entre los dos.
